@@ -5,7 +5,7 @@ Detta repository innehåller kod för ett enklare REST API byggt med NodeJs och 
 En liveversion av APIet finns tillgänglig på följande URL: https://dt207g-moment2-lgk1.onrender.com/api/work_experience
 
 ## Installation, databas
-APIet använder en PostgreSQL-databas. Klona ner källkodsfilerna, kör kommando npm install för att installera nödvändiga npm-paket. Kör installations-skriptet server.js. Installations-skriptet skapar databastabeller enligt nedanstående:
+APIet använder en mongoDB-databas. Klona ner källkodsfilerna, kör kommando npm install för att installera nödvändiga npm-paket. Kör installations-skriptet server.js. Installations-skriptet skapar databastabeller enligt nedanstående:
 
 | Tabellnamn         | Fält     |
 |--------------|-----------|
@@ -16,18 +16,18 @@ Nedan finns beskrivet hur man nå APIet på olika vis:
 
 | Metod         | Ändpunkt     | Beskrivning |
 |--------------|-----------|------------|
-| GET | api/work_experience      | Hämtar alla tillgängliga jobberfarenheter        |
-| POST      | api/work_experience  | Lagrar en ny jobberfarenhet, kräver att ett workExperience-objekt skickas med       |
-|PUT|/api/work_experience/:id|Uppdaterar existerande jobberfarenhet med angivet ID. Kräver att ett workExperience-objekt skickas med|
-|DELETE|/api/work_experience/:id|Raderar en jobberfarenhet med angivet ID.|
+| GET | /jobs      | Hämtar alla tillgängliga jobberfarenheter        |
+| POST      | /jobs  | Lagrar en ny jobberfarenhet, kräver att ett workExperience-objekt skickas med       |
+|PUT|/jobs/:id|Uppdaterar existerande jobberfarenhet med angivet ID. Kräver att ett workExperience-objekt skickas med|
+|DELETE|/jobs/:id|Raderar en jobberfarenhet med angivet ID.|
 
 Ett workExperience-objekt returneras/skickas som JSON med följande struktur:
 
 ```
 
 {
-                "company_name": "Sawabona AB",
-                "job_title": "HR-konsult",
+                "company": "Sawabona AB",
+                "jobtitle": "HR-konsult",
                 "location": "Göteborg",
                 "startdate": "2022-01-01",
                 "enddate": "null" | "2023-01-01",
