@@ -2,14 +2,14 @@
 Detta repository innehåller kod för ett enklare REST API byggt med NodeJs och Express. APIet är byggt för att hantera mitt CV. Grundläggande funktionalitet för CRUD (Create, Read, Update, Delete) är implementerad.
 
 ## Länk
-En liveversion av APIet finns tillgänglig på följande URL: https://dt207g-moment2-lgk1.onrender.com/api/work_experience
+En liveversion av APIet finns tillgänglig på följande URL: https://dt207g-mongodb-api.onrender.com/jobs
 
 ## Installation, databas
 APIet använder en mongoDB-databas. Klona ner källkodsfilerna, kör kommando npm install för att installera nödvändiga npm-paket. Kör installations-skriptet server.js. Installations-skriptet skapar databastabeller enligt nedanstående:
 
 | Tabellnamn         | Fält     |
 |--------------|-----------|
-| work_experience | id (int), company_name (varchar(255)), job_title (varchar(255)) location (varchar(55)), startdate (date), enddate (date), description (varchar(455))       |
+| work_experience | _id (int), company_name (varchar(255)), job_title (varchar(255)) location (varchar(55)), startdate (date), enddate (date), description (varchar(455))       |
 
 ## Användning
 Nedan finns beskrivet hur man nå APIet på olika vis:
